@@ -8,7 +8,6 @@ const getNews = async (req,res)=>{
       var data = await axios.get(process.env.url);
       data.data.articles.map((e) => {
         responseObj.push({
-            "id": uuid.v4(),
             "title":e.title,
             "description":e.description,
             "url":e.url,
